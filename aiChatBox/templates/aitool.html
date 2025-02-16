@@ -1,0 +1,39 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Flex container to align left (Chat Interface) & right (Chat History) -->
+<div class="flex flex-row h-screen p-6 space-x-6">
+
+    <!-- Left Side (Chat Interface) -->
+    <div class="w-1/2 flex flex-col p-6 bg-gray-800 rounded-lg shadow-xl space-y-4">
+        <h1 class="text-2xl font-bold text-center">ChatGPT Clone (DeepSeek-R1)</h1>
+
+        <!-- Chat Box -->
+        <div id="chat-box" class="h-96 overflow-y-auto border border-gray-700 p-4 rounded-lg bg-gray-700 space-y-2"></div>
+
+        <!-- Input & Send Button -->
+        <div class="flex items-center space-x-4">
+            <input id="user-input" type="text" placeholder="Type your message..."
+                   class="flex-1 p-3 rounded-lg bg-gray-700 text-white outline-none border border-gray-600">
+            <button id="send-btn" class="p-3 bg-blue-600 rounded-lg hover:bg-blue-500">➤</button>
+        </div>
+        <!-- Loading Bar (hidden by default) -->
+        <div id="loading-bar" class="w-full h-1 bg-blue-600 mt-4 hidden"></div>
+        <!-- Loading Spinner (hidden by default) -->
+        <div id="loading-spinner" class="hidden flex justify-center items-center mt-4">
+            <div class="w-16 h-16 border-t-4 border-blue-600 border-solid rounded-full animate-spin"></div>
+        </div>
+    </div>
+
+   
+
+    <!-- Right Side (Chat History) -->
+    <!--<div class="w-1/2 flex flex-col p-6 bg-gray-900 rounded-lg shadow-xl space-y-4">
+        <h2 class="text-xl font-bold text-center">Chat History</h2>
+        <div id="history-box" class="h-96 overflow-y-auto border border-gray-700 p-4 rounded-lg bg-gray-800 space-y-2"></div>
+    </div>-->
+
+</div>
+
+{% endblock %}
